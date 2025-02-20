@@ -9,6 +9,7 @@ import {
   BarChartIcon,
   LockClosedIcon,
 } from "@radix-ui/react-icons"
+import { TechStack } from "@/components/sections/TechStack"
 
 export const metadata: Metadata = {
   title: "Yanchew - Innovative Technologielösungen für Ihren Geschäftserfolg",
@@ -110,6 +111,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Tech Stack Section */}
+      <TechStack />
 
       {/* Testimonials Section */}
       <section className="container py-20">
