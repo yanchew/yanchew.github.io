@@ -10,21 +10,28 @@ import {
   LockClosedIcon,
 } from "@radix-ui/react-icons"
 import { TechStack } from "@/components/sections/TechStack"
+import { Hero } from "@/components/sections/Hero"
 
 export const metadata: Metadata = {
-  title: "Yanchew - Innovative Technologielösungen für Ihren Geschäftserfolg",
-  description: "Yanchew bietet maßgeschneiderte digitale Lösungen für die Transformation Ihres Unternehmens. Entdecken Sie unsere innovativen IT-Dienstleistungen, Technologieberatung und Softwareentwicklung.",
-  keywords: "Digitale Transformation, IT-Beratung, Softwareentwicklung, Cloud-Lösungen, KI, IT-Sicherheit, Deutschland",
+  title: "Yanchew | Next.js & React Webentwicklung Agentur Berlin | TypeScript Experten",
+  description: "✓ Next.js 14 Entwicklung ✓ React & TypeScript Programmierung ✓ Headless CMS Integration ✓ Performance-optimierte Webanwendungen ✓ SEO-optimierte Websites ✓ Vercel Hosting Experten in Berlin",
+  keywords: "Next.js Entwicklung Berlin, React Agentur Deutschland, TypeScript Programmierung, Vercel Hosting Experten, TailwindCSS Entwicklung, SEO-optimierte Webentwicklung, Performance-optimierte Webanwendungen, Headless CMS Integration, Server Side Rendering, React Server Components, Full Stack JavaScript Entwicklung, Enterprise React Entwicklung, Next.js 14 Migration, TypeScript Code Migration, Web Performance Optimierung",
+  openGraph: {
+    title: "Next.js & React Webentwicklung Agentur Berlin | TypeScript Experten",
+    description: "Professionelle Webentwicklung mit Next.js, React & TypeScript. Performance-optimierte Webanwendungen & SEO-fokussierte Entwicklung für Ihren Geschäftserfolg.",
+    type: "website",
+    locale: "de_DE",
+  },
 }
 
 // Schema.org markup for better SEO
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   "name": "Yanchew",
   "url": "https://www.yanchew.de",
   "logo": "https://www.yanchew.de/logo.png",
-  "description": "Yanchew bietet maßgeschneiderte digitale Lösungen für die Transformation Ihres Unternehmens.",
+  "description": "Spezialisierte Webentwicklung mit Next.js, React und TypeScript. Performance-optimierte Webanwendungen und SEO-fokussierte Entwicklung für Unternehmen in Deutschland.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Musterstraße 123",
@@ -41,8 +48,102 @@ const jsonLd = {
   "sameAs": [
     "https://www.linkedin.com/company/yanchew",
     "https://www.xing.com/companies/yanchew"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Deutschland"
+  },
+  "serviceType": "Web Development",
+  "knowsAbout": [
+    "Next.js Development",
+    "React Development",
+    "TypeScript",
+    "Vercel Deployment",
+    "TailwindCSS",
+    "Web Performance Optimization",
+    "Server Side Rendering",
+    "React Server Components",
+    "Headless CMS Integration",
+    "Enterprise Web Development"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Next.js Entwicklung",
+        "description": "Professionelle Entwicklung mit Next.js 14 und React Server Components"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Performance Optimierung",
+        "description": "Web Vitals Optimierung und SEO-fokussierte Entwicklung"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Enterprise React Entwicklung",
+        "description": "Skalierbare React Anwendungen für Großunternehmen"
+      }
+    }
   ]
 }
+
+const features = [
+  {
+    title: "Next.js 14 & React Server Components",
+    description: "Modernste Server-Side Rendering Technologien für optimale Performance. React Server Components und Streaming für blitzschnelle Ladezeiten.",
+    icon: <RocketIcon className="h-6 w-6" />,
+  },
+  {
+    title: "Enterprise TypeScript Entwicklung",
+    description: "Typsichere Entwicklung nach Enterprise-Standards. Code-Migration und Modernisierung bestehender JavaScript Anwendungen.",
+    icon: <CodeIcon className="h-6 w-6" />,
+  },
+  {
+    title: "TailwindCSS & Responsive Design",
+    description: "Mobile-First Entwicklung mit TailwindCSS. Barrierefreie Implementierung nach WCAG-Standards für maximale Zugänglichkeit.",
+    icon: <LightningBoltIcon className="h-6 w-6" />,
+  },
+  {
+    title: "Web Performance Optimierung",
+    description: "Core Web Vitals Optimierung und Performance-Monitoring. Vercel Edge Functions für globale Content-Auslieferung.",
+    icon: <GearIcon className="h-6 w-6" />,
+  },
+  {
+    title: "Headless CMS & E-Commerce",
+    description: "Integration von Sanity, Contentful und Shopify. API-First Entwicklung für flexible Content-Verwaltung und E-Commerce.",
+    icon: <BarChartIcon className="h-6 w-6" />,
+  },
+  {
+    title: "Full Stack JavaScript Entwicklung",
+    description: "End-to-End TypeScript Entwicklung. Node.js APIs und Datenbank-Integration für vollständige Webanwendungen.",
+    icon: <LockClosedIcon className="h-6 w-6" />,
+  },
+]
+
+const showcaseProjects = [
+  {
+    title: "Enterprise E-Commerce Platform",
+    description: "Next.js 14 & Shopify Integration. Server Components für optimale Performance, 99/100 PageSpeed Score.",
+    category: "Enterprise E-Commerce",
+  },
+  {
+    title: "TypeScript Migrations-Projekt",
+    description: "JavaScript zu TypeScript Migration. Implementierung von Monorepo-Struktur mit Turborepo für bessere Entwicklungseffizienz.",
+    category: "Code-Modernisierung",
+  },
+  {
+    title: "Headless CMS Platform",
+    description: "Sanity CMS Integration mit Next.js. Internationalisierung und automatisierte Content-Workflows für globale Märkte.",
+    category: "Content Platform",
+  },
+]
 
 export default function HomePage() {
   return (
@@ -52,54 +153,23 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-        <div className="container">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
-            <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-                Innovative Technologielösungen für Ihren Geschäftserfolg
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground">
-                Yanchew bietet maßgeschneiderte digitale Lösungen, die Ihr Unternehmen in die Zukunft führen. Entdecken Sie unsere innovativen Dienstleistungen.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/kontakt"
-                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  Kontakt aufnehmen
-                  <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  href="/dienstleistungen"
-                  className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                >
-                  Unsere Dienstleistungen
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Features Section */}
       <section className="container py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Unsere Kernkompetenzen
+            Professionelle Next.js & React Entwicklung
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Wir bieten umfassende Lösungen für die digitale Transformation Ihres Unternehmens
+            Enterprise-Grade Webanwendungen mit modernsten JavaScript Technologien
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-7xl">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.title} className="group relative">
-                <div className="relative rounded-lg border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
+                <div className="relative rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
                   <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     {feature.icon}
                   </div>
@@ -112,51 +182,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
       <TechStack />
 
-      {/* Testimonials Section */}
-      <section className="container py-20">
+      {/* Project Showcase Section */}
+      <section className="container py-20" id="projects">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Was unsere Kunden sagen
+            Enterprise React & Next.js Projekte
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Erfahren Sie, wie wir anderen Unternehmen geholfen haben
+            Performance-optimierte Webanwendungen für Unternehmen
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <figure key={index} className="rounded-lg border bg-card p-6">
-              <blockquote className="text-lg text-muted-foreground">
-                &ldquo;{testimonial.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-4">
-                <div className="font-semibold">{testimonial.author}</div>
-                <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-              </figcaption>
-            </figure>
+          {showcaseProjects.map((project, index) => (
+            <div 
+              key={index} 
+              className="rounded-lg border bg-background/50 p-6"
+              loading="lazy"
+            >
+              <div className="mb-2 text-sm font-medium text-primary">{project.category}</div>
+              <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
+              <p className="text-muted-foreground">{project.description}</p>
+            </div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="container py-20">
-        <div className="relative overflow-hidden rounded-lg border bg-card p-8 md:p-12 lg:p-16">
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <section className="container py-20" id="contact">
+        <div className="relative overflow-hidden rounded-lg border bg-background/50 p-8 md:p-12 lg:p-16">
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.03]" />
+          </div>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Bereit für die digitale Transformation?
+              Next.js Entwicklung für Ihr Unternehmen
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Lassen Sie uns gemeinsam Ihr Unternehmen in die digitale Zukunft führen.
+              Profitieren Sie von unserer Expertise in React und TypeScript Entwicklung
             </p>
             <div className="mt-8">
               <Link
                 href="/kontakt"
                 className="group inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                Jetzt Beratungsgespräch vereinbaren
+                Projekt besprechen
                 <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -165,55 +236,4 @@ export default function HomePage() {
       </section>
     </>
   )
-}
-
-const features = [
-  {
-    title: "Digitale Transformation",
-    description: "Wir begleiten Sie auf dem Weg zur digitalen Transformation Ihres Unternehmens mit maßgeschneiderten Strategien und Lösungen.",
-    icon: <RocketIcon className="h-6 w-6" />,
-  },
-  {
-    title: "Technologie-Beratung",
-    description: "Unsere Experten beraten Sie zu den neuesten Technologien und deren optimaler Integration in Ihre Geschäftsprozesse.",
-    icon: <LightningBoltIcon className="h-6 w-6" />,
-  },
-  {
-    title: "Softwareentwicklung",
-    description: "Wir entwickeln hochwertige, skalierbare Softwarelösungen, die perfekt auf Ihre Anforderungen zugeschnitten sind.",
-    icon: <CodeIcon className="h-6 w-6" />,
-  },
-  {
-    title: "Cloud-Lösungen",
-    description: "Modernisieren Sie Ihre IT-Infrastruktur mit unseren sicheren und effizienten Cloud-Lösungen.",
-    icon: <GearIcon className="h-6 w-6" />,
-  },
-  {
-    title: "Datenanalyse & KI",
-    description: "Nutzen Sie das Potenzial Ihrer Daten durch fortschrittliche Analysen und künstliche Intelligenz.",
-    icon: <BarChartIcon className="h-6 w-6" />,
-  },
-  {
-    title: "IT-Sicherheit",
-    description: "Schützen Sie Ihr Unternehmen mit unseren umfassenden IT-Sicherheitslösungen vor digitalen Bedrohungen.",
-    icon: <LockClosedIcon className="h-6 w-6" />,
-  },
-]
-
-const testimonials = [
-  {
-    quote: "Die Zusammenarbeit mit Yanchew hat unsere digitale Transformation erheblich beschleunigt. Professionell, kompetent und zielorientiert.",
-    author: "Dr. Michael Schmidt",
-    role: "CTO, TechCorp GmbH"
-  },
-  {
-    quote: "Hervorragende technische Expertise gepaart mit einem tiefen Verständnis für unsere Geschäftsprozesse.",
-    author: "Sarah Weber",
-    role: "Geschäftsführerin, InnovateTech"
-  },
-  {
-    quote: "Die Cloud-Migration verlief reibungslos und hat unsere Effizienz deutlich gesteigert. Ein verlässlicher Partner.",
-    author: "Thomas Müller",
-    role: "IT-Leiter, DataSys AG"
-  }
-] 
+} 

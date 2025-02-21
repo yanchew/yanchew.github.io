@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   publisher: 'Yanchew GmbH',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://www.yanchew.de'
+    canonical: '/'
   },
   openGraph: {
     type: 'website',
@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     description: 'Yanchew bietet innovative Technologielösungen für Unternehmen. Entdecken Sie unsere maßgeschneiderten Dienstleistungen.',
     siteName: 'Yanchew',
   },
+  metadataBase: new URL('https://www.yanchew.de'),
+  other: {
+    "google-site-verification": "YOUR_VERIFICATION_CODE"
+  }
 }
 
 export default function RootLayout({
@@ -37,7 +41,21 @@ export default function RootLayout({
     <html lang="de" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+        <link
+          rel="preload"
+          href={inter.url}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://www.google-analytics.com"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://www.google-analytics.com"
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider

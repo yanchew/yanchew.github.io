@@ -110,10 +110,11 @@ export function TechStack() {
   }
 
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden py-20" id="tech-stack">
       {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-      <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-full bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-background/50">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.03]" />
+      </div>
 
       {/* Section Header */}
       <div className="container mb-12">
@@ -147,32 +148,41 @@ export function TechStack() {
           })}
         >
           {[...techStack, ...techStack].map((tech, index) => (
-            <motion.div
+            <div 
               key={`${tech.name}-${index}`}
-              className="relative flex w-[280px] flex-col items-center rounded-xl border bg-background p-6"
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 },
-              }}
-              style={{
-                boxShadow: `0 0 20px ${tech.color}10`,
-              }}
+              className="relative z-0 transition-[z-index] duration-200 hover:z-10"
             >
-              <div
-                className="mb-4 flex h-16 w-full items-center justify-center"
+              <motion.div
+                className="group relative flex w-[280px] flex-col items-center rounded-xl border bg-background/50 p-6"
+                initial={{ boxShadow: `0 0 20px ${tech.color}10` }}
+                whileHover={{
+                  boxShadow: `0 4px 20px ${tech.color}30`,
+                  transition: { duration: 0.2 },
+                }}
+                style={{
+                  willChange: "transform",
+                }}
               >
-                <Image
-                  src={currentTheme === "dark" ? tech.wordmarkDark : tech.wordmarkLight}
-                  alt={`${tech.name} logo`}
-                  width={160}
-                  height={48}
-                  className={tech.imageClassName || "h-8 w-auto object-contain"}
+                <div 
+                  className="absolute inset-0 rounded-xl border border-transparent transition-colors group-hover:border-primary/50 group-hover:bg-background/80"
                 />
-              </div>
-              <p className="text-center text-sm text-muted-foreground">
-                {tech.description}
-              </p>
-            </motion.div>
+                <div className="relative z-10 mb-4 flex h-16 w-full items-center justify-center">
+                  <Image
+                    src={currentTheme === "dark" ? tech.wordmarkDark : tech.wordmarkLight}
+                    alt={`${tech.name} logo`}
+                    width={160}
+                    height={48}
+                    className={`${tech.imageClassName || "h-8 w-auto object-contain"} transition-transform duration-200 group-hover:scale-105`}
+                    loading={index < 3 ? undefined : "lazy"}
+                    quality={90}
+                    priority={index < 3}
+                  />
+                </div>
+                <p className="relative z-10 text-center text-sm text-muted-foreground">
+                  {tech.description}
+                </p>
+              </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>
