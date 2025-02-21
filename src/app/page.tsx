@@ -129,7 +129,7 @@ export default function HomePage() {
           {testimonials.map((testimonial, index) => (
             <figure key={index} className="rounded-lg border bg-card p-6">
               <blockquote className="text-lg text-muted-foreground">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-4">
                 <div className="font-semibold">{testimonial.author}</div>
