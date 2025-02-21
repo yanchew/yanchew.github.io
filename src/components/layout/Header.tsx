@@ -49,7 +49,6 @@ export function Header() {
 
   const navigation = [
     { name: "Startseite", href: "/" },
-    { name: "Dienstleistungen", href: "/dienstleistungen" },
     { name: "Über Uns", href: "/ueber-uns" },
     { name: "Kontakt", href: "/kontakt" },
   ]

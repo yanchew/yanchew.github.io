@@ -29,69 +29,24 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Yanchew",
-  "url": "https://www.yanchew.de",
-  "logo": "https://www.yanchew.de/logo.png",
-  "description": "Spezialisierte Webentwicklung mit Next.js, React und TypeScript. Performance-optimierte Webanwendungen und SEO-fokussierte Entwicklung für Unternehmen in Deutschland.",
+  "url": "https://www.yanchew.com",
+  "description": "Spezialisierte Webentwicklung mit Next.js, React und TypeScript. Performance-optimierte Webanwendungen und SEO-fokussierte Entwicklung.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Musterstraße 123",
-    "addressLocality": "Berlin",
-    "postalCode": "12345",
+    "streetAddress": "Adolf-Kaschny-Straße 19",
+    "addressLocality": "Leverkusen",
+    "postalCode": "51373",
     "addressCountry": "DE"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+49-123-456789",
-    "contactType": "customer service",
-    "email": "info@yanchew.de"
+    "email": "info@yanchew.com",
+    "contactType": "customer service"
   },
-  "sameAs": [
-    "https://www.linkedin.com/company/yanchew",
-    "https://www.xing.com/companies/yanchew"
-  ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "Deutschland"
-  },
-  "serviceType": "Web Development",
-  "knowsAbout": [
-    "Next.js Development",
-    "React Development",
-    "TypeScript",
-    "Vercel Deployment",
-    "TailwindCSS",
-    "Web Performance Optimization",
-    "Server Side Rendering",
-    "React Server Components",
-    "Headless CMS Integration",
-    "Enterprise Web Development"
-  ],
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Next.js Entwicklung",
-        "description": "Professionelle Entwicklung mit Next.js 14 und React Server Components"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Performance Optimierung",
-        "description": "Web Vitals Optimierung und SEO-fokussierte Entwicklung"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Enterprise React Entwicklung",
-        "description": "Skalierbare React Anwendungen für Großunternehmen"
-      }
-    }
-  ]
+  "founder": {
+    "@type": "Person",
+    "name": "Max Andronytschew"
+  }
 }
 
 const features = [
@@ -165,20 +120,16 @@ export default function HomePage() {
             Enterprise-Grade Webanwendungen mit modernsten JavaScript Technologien
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-7xl">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.title} className="group relative">
-                <div className="relative rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
-                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold leading-7">{feature.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{feature.description}</p>
-                </div>
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <div key={feature.title} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                {feature.icon}
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-semibold leading-7">{feature.title}</h3>
+              <p className="mt-2 text-muted-foreground">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -194,13 +145,9 @@ export default function HomePage() {
             Performance-optimierte Webanwendungen für Unternehmen
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {showcaseProjects.map((project, index) => (
-            <div 
-              key={index} 
-              className="rounded-lg border bg-background/50 p-6"
-              loading="lazy"
-            >
+            <div key={index} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
               <div className="mb-2 text-sm font-medium text-primary">{project.category}</div>
               <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
               <p className="text-muted-foreground">{project.description}</p>

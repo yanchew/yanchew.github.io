@@ -10,14 +10,10 @@ import {
 const footerLinks = {
   company: [
     { name: "Über Uns", href: "/ueber-uns" },
-    { name: "Blog", href: "/blog" },
-    { name: "Team", href: "/team" },
   ],
   services: [
     { name: "Unsere Lösungen", href: "/dienstleistungen" },
-    { name: "Referenzen", href: "/referenzen" },
     { name: "Technologien", href: "/technologien" },
-    { name: "Branchen", href: "/branchen" },
   ],
   legal: [
     { name: "Impressum", href: "/impressum" },
