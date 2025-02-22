@@ -1,87 +1,80 @@
 # Yanchew Website
 
-Eine moderne Unternehmenswebsite, entwickelt mit Next.js, TypeScript und Tailwind CSS.
+Modern website built with Next.js 14, React, TypeScript, and TailwindCSS.
 
-## Technologie-Stack
+## Features
 
-- **Frontend Framework:** Next.js 14
-- **Sprache:** TypeScript
-- **Styling:** Tailwind CSS
-- **UI Komponenten:** Custom Components
-- **Icons:** Radix UI Icons
-- **Theming:** Dark/Light Mode mit next-themes
+- ⚡️ Next.js 14 with App Router
+- 💨 TailwindCSS for styling
+- 📦 TypeScript for type safety
+- 🎨 Radix UI Icons
+- 🔥 Framer Motion animations
+- 🌓 Dark mode support
+- 📱 Fully responsive design
+- ♿️ Accessible (WCAG compliant)
+- 🔍 SEO optimized
+- 🚀 Performance optimized
 
-## Projektstruktur
+## Getting Started
 
-```
-projekt-b/
-├── src/
-│   ├── app/              # Next.js App Router
-│   ├── components/       # React Komponenten
-│   └── lib/             # Utilities und Hilfsfunktionen
-├── public/              # Statische Dateien
-└── ...
-```
+### Prerequisites
 
-## Entwicklung
-
-### Voraussetzungen
-
-- Node.js (LTS Version)
-- npm oder yarn
-- Git
+- Node.js 18+ 
+- npm or yarn
 
 ### Installation
 
-1. Repository klonen:
-   ```bash
-   git clone git@github.com:yanchew/ProjectB.git
-   cd ProjectB
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/yanchew-website.git
+```
 
-2. Abhängigkeiten installieren:
-   ```bash
-   npm install
-   ```
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-3. Entwicklungsserver starten:
-   ```bash
-   npm run dev
-   ```
+3. Create a `.env` file in the root directory and add your environment variables:
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-### Branch-Struktur
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-- `main` - Produktionsversion
-- `develop` - Entwicklungsversion
-- `feature/*` - Feature-Branches
-- `bugfix/*` - Bugfix-Branches
-- `release/*` - Release-Branches
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Entwicklungsworkflow
+## Project Structure
 
-1. Neuen Feature-Branch erstellen:
-   ```bash
-   git checkout develop
-   git checkout -b feature/name-des-features
-   ```
+```
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── components/         # React components
+│   ├── lib/               # Utility functions
+│   └── styles/            # Global styles
+├── public/                # Static assets
+└── package.json          # Project dependencies
+```
 
-2. Änderungen committen:
-   ```bash
-   git add .
-   git commit -m "Beschreibung der Änderungen"
-   ```
+## Built With
 
-3. Feature-Branch pushen:
-   ```bash
-   git push -u origin feature/name-des-features
-   ```
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Radix UI](https://www.radix-ui.com/)
 
-4. Pull Request erstellen von Feature-Branch nach `develop`
+## License
 
-## Deployment
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Die Website wird automatisch bei Push auf den `main` Branch deployed.
+## Contact
 
-## Lizenz
-
-ISC 
+Yanchew GmbH - info@yanchew.com 
