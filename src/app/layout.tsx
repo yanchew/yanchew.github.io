@@ -42,13 +42,6 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link
-          rel="preload"
-          href={inter.url}
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
           rel="preconnect"
           href="https://www.google-analytics.com"
         />

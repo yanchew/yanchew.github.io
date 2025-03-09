@@ -1,3 +1,24 @@
+import { motion } from 'framer-motion';
+import { Code, Laptop, Zap } from 'lucide-react';
+
+const features = [
+  {
+    title: "Next.js 14 mit App Router",
+    description: "Modernste Next.js Version für optimale Performance und SEO",
+    icon: Zap
+  },
+  {
+    title: "TypeScript & React",
+    description: "Typsichere Entwicklung mit React und TypeScript",
+    icon: Code
+  },
+  {
+    title: "Responsive Design",
+    description: "Perfekte Darstellung auf allen Geräten",
+    icon: Laptop
+  }
+];
+
 export function Features() {
   return (
     <section id="features" className="relative py-16">

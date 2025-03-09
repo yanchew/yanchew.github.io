@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
   images: {
-    domains: [],
-    remotePatterns: [],
+    unoptimized: true,
   },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
-    return config
-  },
+  basePath: '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
