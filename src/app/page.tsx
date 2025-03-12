@@ -11,6 +11,7 @@ import {
 } from "@radix-ui/react-icons"
 import { TechStack } from "@/components/sections/TechStack"
 import { Hero } from "@/components/sections/Hero"
+import { Container } from "@/components/layout/Container"
 
 export const metadata: Metadata = {
   title: "Yanchew | Next.js & React Webentwicklung Agentur Berlin | TypeScript Experten",
@@ -111,75 +112,81 @@ export default function HomePage() {
       <Hero />
 
       {/* Features Section */}
-      <section className="container py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Professionelle Next.js & React Entwicklung
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Enterprise-Grade Webanwendungen mit modernsten JavaScript Technologien
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => (
-            <div key={feature.title} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                {feature.icon}
+      <section className="py-20">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Professionelle Next.js & React Entwicklung
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Enterprise-Grade Webanwendungen mit modernsten JavaScript Technologien
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
+              <div key={feature.title} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  {feature.icon}
+                </div>
+                <h3 className="text-lg font-semibold leading-7">{feature.title}</h3>
+                <p className="mt-2 text-muted-foreground">{feature.description}</p>
               </div>
-              <h3 className="text-lg font-semibold leading-7">{feature.title}</h3>
-              <p className="mt-2 text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Container>
       </section>
 
       <TechStack />
 
       {/* Project Showcase Section */}
-      <section className="container py-20" id="projects">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Enterprise React & Next.js Projekte
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Performance-optimierte Webanwendungen für Unternehmen
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {showcaseProjects.map((project, index) => (
-            <div key={index} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
-              <div className="mb-2 text-sm font-medium text-primary">{project.category}</div>
-              <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
-              <p className="text-muted-foreground">{project.description}</p>
-            </div>
-          ))}
-        </div>
+      <section className="py-20" id="projects">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Enterprise React & Next.js Projekte
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Performance-optimierte Webanwendungen für Unternehmen
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {showcaseProjects.map((project, index) => (
+              <div key={index} className="group relative flex flex-col rounded-lg border bg-background/50 p-6 transition-colors hover:border-primary/50 hover:bg-background/80">
+                <div className="mb-2 text-sm font-medium text-primary">{project.category}</div>
+                <h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
+                <p className="text-muted-foreground">{project.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="container py-20" id="contact">
-        <div className="relative overflow-hidden rounded-lg border bg-background/50 p-8 md:p-12 lg:p-16">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.03]" />
-          </div>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Next.js Entwicklung für Ihr Unternehmen
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Profitieren Sie von unserer Expertise in React und TypeScript Entwicklung
-            </p>
-            <div className="mt-8">
-              <Link
-                href="/kontakt"
-                className="group inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                Projekt besprechen
-                <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+      <section className="py-20" id="contact">
+        <Container>
+          <div className="relative overflow-hidden rounded-lg border bg-background/50 p-8 md:p-12 lg:p-16">
+            <div className="absolute inset-0 -z-10">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.03]" />
+            </div>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Next.js Entwicklung für Ihr Unternehmen
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Profitieren Sie von unserer Expertise in React und TypeScript Entwicklung
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/kontakt"
+                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Projekt besprechen
+                  <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   )

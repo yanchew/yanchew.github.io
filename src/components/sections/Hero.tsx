@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
+import { Container } from "../layout/Container"
 
 export function Hero() {
   const businessHighlights = [
@@ -27,7 +28,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-primary/[0.03]" />
       </div>
 
-      <div className="container relative">
+      <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           {/* Content */}
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
@@ -99,7 +100,7 @@ export function Hero() {
             </motion.div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 } 

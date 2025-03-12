@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code, Laptop, Zap } from 'lucide-react';
+import { Container } from '../layout/Container';
 
 const features = [
   {
@@ -22,7 +23,7 @@ const features = [
 export function Features() {
   return (
     <section id="features" className="relative py-16">
-      <div className="container">
+      <Container>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
@@ -44,7 +45,7 @@ export function Features() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 } 

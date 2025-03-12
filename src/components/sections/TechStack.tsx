@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useAnimationControls } from "framer-motion"
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import { Container } from "../layout/Container"
 
 interface TechItem {
   name: string
@@ -117,7 +118,7 @@ export function TechStack() {
       </div>
 
       {/* Section Header */}
-      <div className="container mb-12">
+      <Container className="mb-12">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Unsere Technologie-Stack
@@ -126,7 +127,7 @@ export function TechStack() {
             Wir nutzen modernste Technologien für optimale Performance und Skalierbarkeit
           </p>
         </div>
-      </div>
+      </Container>
 
       {/* Carousel Container */}
       <div

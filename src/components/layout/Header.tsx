@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
+import { Container } from "./Container"
 
 function SunIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -55,48 +56,50 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Yanchew</span>
-          </Link>
-        </div>
-        <nav className="flex flex-1 items-center justify-between">
-          <div className="flex gap-6 md:gap-10">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === item.href
-                    ? "text-foreground"
-                    : "text-foreground/60"
-                }`}
+      <Container>
+        <div className="flex h-16 items-center">
+          <div className="mr-4 flex">
+            <Link href="/" className="mr-6 flex items-center space-x-2">
+              <span className="font-bold">Yanchew</span>
+            </Link>
+          </div>
+          <nav className="flex flex-1 items-center justify-between">
+            <div className="flex gap-6 md:gap-10">
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    pathname === item.href
+                      ? "text-foreground"
+                      : "text-foreground/60"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className="relative flex h-6 w-12 items-center justify-center rounded-full border bg-muted p-0.5 transition-colors hover:bg-muted/80"
+                aria-label="Theme umschalten"
               >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="relative flex h-6 w-12 items-center justify-center rounded-full border bg-muted p-0.5 transition-colors hover:bg-muted/80"
-              aria-label="Theme umschalten"
-            >
-              <motion.div
-                className="absolute h-5 w-5 rounded-full bg-white shadow-sm"
-                animate={{ x: theme === "light" ? -6 : 6 }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              />
-              <div className="flex w-full items-center justify-between px-1">
-                <SunIcon className="stroke-amber-500 stroke-2" />
-                <MoonIcon className="stroke-slate-600 stroke-2 dark:stroke-slate-400" />
-              </div>
-              <span className="sr-only">Theme umschalten</span>
-            </button>
-          </div>
-        </nav>
-      </div>
+                <motion.div
+                  className="absolute h-5 w-5 rounded-full bg-white shadow-sm"
+                  animate={{ x: theme === "light" ? -6 : 6 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                />
+                <div className="flex w-full items-center justify-between px-1">
+                  <SunIcon className="stroke-amber-500 stroke-2" />
+                  <MoonIcon className="stroke-slate-600 stroke-2 dark:stroke-slate-400" />
+                </div>
+                <span className="sr-only">Theme umschalten</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </Container>
     </header>
   )
 } 
