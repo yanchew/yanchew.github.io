@@ -8,6 +8,13 @@ import {
   GearIcon,
   BarChartIcon,
   LockClosedIcon,
+  MagicWandIcon,
+  StackIcon,
+  GridIcon,
+  QuoteIcon,
+  HeartIcon,
+  MoonIcon,
+  SunIcon,
 } from "@radix-ui/react-icons"
 import { TechStack } from "@/components/sections/TechStack"
 import { Hero } from "@/components/sections/Hero"
@@ -101,6 +108,60 @@ const showcaseProjects = [
   },
 ]
 
+// New AI demonstration examples
+const aiDemos = [
+  {
+    title: "AI-Assisted Development",
+    description: "Maximierung der Entwicklungsgeschwindigkeit durch KI-Tools und Automatisierung. Reduzierung der Entwicklungszeit um bis zu 40%.",
+    icon: <MagicWandIcon className="h-6 w-6" />,
+    metrics: "40% schnellere Entwicklung",
+  },
+  {
+    title: "KI-basierte Inhaltsoptimierung",
+    description: "Intelligente Content-Analyse und Optimierung für maximalen Impact und bessere Conversion-Raten bei Ihren Nutzern.",
+    icon: <StackIcon className="h-6 w-6" />,
+    metrics: "32% höhere Conversion",
+  },
+  {
+    title: "Predictive Analytics",
+    description: "Vorausschauende Analysen für die kontinuierliche Verbesserung Ihrer digitalen Präsenz basierend auf Nutzerverhalten.",
+    icon: <GridIcon className="h-6 w-6" />,
+    metrics: "28% bessere Kundenbindung",
+  },
+];
+
+// New sustainability initiatives
+const sustainabilityInitiatives = [
+  {
+    title: "Grüne Serverinfrastruktur",
+    description: "Wir setzen ausschließlich auf CO2-neutrale Serverinfrastruktur mit regenerativen Energien und optimaler Serverauslastung.",
+  },
+  {
+    title: "Performance-Optimierung",
+    description: "Energieeffiziente Websites durch konsequente Optimierung der Ladezeiten und Ressourcenverbrauch.",
+  },
+  {
+    title: "Nachhaltige Entwicklungspraktiken",
+    description: "Langfristig wartbare Codestrukturen und modulare Architekturen für eine längere Lebensdauer Ihrer digitalen Produkte.",
+  },
+];
+
+// New client testimonials
+const testimonials = [
+  {
+    quote: "Die Zusammenarbeit mit Yanchew hat unsere digitale Präsenz komplett transformiert. Die Website lädt blitzschnell und die Conversion-Rate ist signifikant gestiegen.",
+    author: "Martina Berger",
+    company: "TechVision GmbH",
+    metrics: "+85% Mobile Conversion",
+  },
+  {
+    quote: "Das Team von Yanchew hat unsere komplexen Anforderungen perfekt umgesetzt. Die Integration von KI-gestützten Funktionen hat unseren Kundenservice revolutioniert.",
+    author: "Markus Weber",
+    company: "Innovate Solutions",
+    metrics: "65% weniger Support-Anfragen",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -137,6 +198,166 @@ export default function HomePage() {
       </section>
 
       <TechStack />
+
+      {/* NEW: AI Integration Showcase Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-background/80">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20 mb-6">
+              <MagicWandIcon className="mr-1 h-3 w-3" /> 2025 Technologie
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              KI-gestützte Webentwicklung
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Revolutionieren Sie Ihre digitale Präsenz mit unseren fortschrittlichen KI-Integrationen
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {aiDemos.map((demo, index) => (
+              <div 
+                key={demo.title}
+                className="group relative overflow-hidden rounded-xl border bg-background/50 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background/80 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="absolute top-0 right-0 bg-primary/10 px-3 py-1 text-xs font-medium text-primary rounded-bl-lg">
+                  {demo.metrics}
+                </div>
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  {demo.icon}
+                </div>
+                <h3 className="text-lg font-semibold leading-7 mt-2">{demo.title}</h3>
+                <p className="mt-2 text-muted-foreground">{demo.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/technologien/ki-integration"
+              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+            >
+              Mehr über unsere KI-Integration erfahren
+              <ArrowRightIcon className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* NEW: Sustainability Section */}
+      <section className="py-20">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div>
+              <div className="inline-flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30 px-3 py-1 text-sm font-medium text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-700/20 dark:ring-green-400/30 mb-6">
+                <HeartIcon className="mr-1 h-3 w-3" /> Nachhaltige Technologie
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Digital Nachhaltig
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Bei Yanchew setzen wir auf nachhaltige Entwicklungspraktiken und umweltbewusste Technologien, um den ökologischen Fußabdruck Ihrer digitalen Präsenz zu minimieren.
+              </p>
+              
+              <div className="mt-8 space-y-6">
+                {sustainabilityInitiatives.map((initiative) => (
+                  <div key={initiative.title} className="flex">
+                    <div className="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-base font-medium">{initiative.title}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground">{initiative.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="rounded-xl border bg-background/50 p-6 relative overflow-hidden h-full flex flex-col justify-center">
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-green-100/50 dark:bg-green-900/20 blur-3xl"></div>
+              <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-blue-100/50 dark:bg-blue-900/20 blur-3xl"></div>
+              
+              <div className="relative z-10 space-y-6 text-center sm:mx-auto sm:max-w-md">
+                <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 mx-auto">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold">Bis zu 70% CO₂-Reduktion</h3>
+                  <p className="mt-2 text-muted-foreground">gegenüber konventionellen Webanwendungen durch optimierten Code und ressourcenschonende Entwicklung</p>
+                </div>
+                
+                <Link
+                  href="/nachhaltigkeit"
+                  className="inline-flex items-center justify-center rounded-md bg-green-600 dark:bg-green-700 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 dark:hover:bg-green-600 transition-colors"
+                >
+                  Mehr erfahren
+                  <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* NEW: Client Testimonials */}
+      <section className="py-20 bg-gradient-to-b from-background to-background/80">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20 mb-6">
+              <QuoteIcon className="mr-1 h-3 w-3" /> Kundenreferenzen
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Was unsere Kunden sagen
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Erfahren Sie, wie unsere Lösungen echte Ergebnisse für Unternehmen liefern
+            </p>
+          </div>
+          
+          <div className="mx-auto mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="group relative rounded-xl border bg-background/50 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-background/80"
+              >
+                <div className="absolute top-6 right-6 text-primary/20 group-hover:text-primary/40 transition-colors">
+                  <QuoteIcon className="h-8 w-8" />
+                </div>
+                <div className="mt-2 mb-6 text-lg font-medium">{testimonial.quote}</div>
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    {testimonial.author.charAt(0)}
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium">{testimonial.author}</p>
+                    <p className="text-xs text-muted-foreground">{testimonial.company}</p>
+                  </div>
+                  <div className="ml-auto">
+                    <div className="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400">
+                      {testimonial.metrics}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link
+              href="/referenzen"
+              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+            >
+              Alle Erfolgsgeschichten ansehen
+              <ArrowRightIcon className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+        </Container>
+      </section>
 
       {/* Project Showcase Section */}
       <section className="py-20" id="projects">
