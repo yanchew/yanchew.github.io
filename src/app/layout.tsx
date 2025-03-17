@@ -1,19 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme/theme-provider"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
   title: 'Yanchew | Innovative Technologielösungen',
   description: 'Yanchew bietet innovative Technologielösungen für Unternehmen. Entdecken Sie unsere maßgeschneiderten Dienstleistungen für Ihren geschäftlichen Erfolg.',
   keywords: 'Yanchew, Technologielösungen, Digitale Transformation, Unternehmensberatung, Deutschland',
-  authors: [{ name: 'Yanchew GmbH' }],
-  creator: 'Yanchew GmbH',
-  publisher: 'Yanchew GmbH',
+  authors: [{ name: 'Yanchew' }],
+  creator: 'Yanchew',
+  publisher: 'Yanchew',
   robots: 'index, follow',
   alternates: {
     canonical: '/'
@@ -50,7 +47,7 @@ export default function RootLayout({
           href="https://www.google-analytics.com"
         />
       </head>
-      <body className={inter.className}>
+      <body className="font-['Helvetica_Neue',_sans-serif]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,9 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import {
-  LinkedInLogoIcon,
   GitHubLogoIcon,
 } from "@radix-ui/react-icons"
 import { Container } from "./Container"
@@ -23,14 +23,19 @@ const footerLinks = {
   ],
   social: [
     {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/company/yanchew",
-      icon: LinkedInLogoIcon,
+      name: "Instagram",
+      href: "https://www.instagram.com/yanchew",
+      icon: "/logos/instagram-icon.svg",
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@yanchew",
+      icon: "/logos/tiktok-icon.svg",
     },
     {
       name: "GitHub",
       href: "https://github.com/yanchew",
-      icon: GitHubLogoIcon,
+      icon: "/logos/github-icon.svg",
     },
   ],
 }
@@ -73,7 +78,13 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <item.icon className="h-5 w-5" />
+                    <Image 
+                      src={item.icon}
+                      alt={`${item.name} logo`}
+                      width={20}
+                      height={20}
+                      className="h-5 w-5 dark:invert dark:brightness-200 brightness-0"
+                    />
                     <span className="sr-only">{item.name}</span>
                   </Link>
                 ))}

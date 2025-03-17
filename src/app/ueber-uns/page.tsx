@@ -78,7 +78,7 @@ const stats = [
 // New team members data
 const teamMembers = [
   {
-    name: "Max Andronytschew",
+    name: "[Name des Geschäftsführers]",
     role: "Gründer & CEO",
     bio: "Mehr als 10 Jahre Erfahrung in der Webentwicklung mit Fokus auf React und TypeScript. Experte für Performance-Optimierung und UX-Design.",
     links: {
@@ -169,9 +169,9 @@ export default function UeberUnsPage() {
     "url": "https://www.yanchew.com/ueber-uns",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Adolf-Kaschny-Straße 19",
-      "addressLocality": "Leverkusen",
-      "postalCode": "51373",
+      "streetAddress": "Beispielstraße 123",
+      "addressLocality": "Berlin",
+      "postalCode": "10115",
       "addressCountry": "DE"
     },
     "contactPoint": {

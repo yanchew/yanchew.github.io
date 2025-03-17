@@ -17,12 +17,8 @@ export default function DatenschutzPage() {
           <div className="space-y-4">
             <h3 className="text-xl font-medium">Verantwortliche Stelle</h3>
             <div className="space-y-2">
-              <p>Yanchew</p>
-              <p>Max Andronytschew</p>
-              <p>Adolf-Kaschny-Straße 19</p>
-              <p>51373 Leverkusen</p>
-              <p>Deutschland</p>
-              <p>E-Mail: info@yanchew.com</p>
+              <p>[Name des Geschäftsführers]</p>
+              <p>Beispielstraße 123</p>
             </div>
           </div>
         </section>
@@ -94,10 +90,8 @@ export default function DatenschutzPage() {
               Gesetzlich vorgeschriebener Datenschutzbeauftragter:
             </p>
             <div className="space-y-2">
-              <p>Max Andronytschew</p>
-              <p>Adolf-Kaschny-Straße 19</p>
-              <p>51373 Leverkusen</p>
-              <p>E-Mail: info@yanchew.com</p>
+              <p>[Name des Geschäftsführers]</p>
+              <p>Beispielstraße 123</p>
             </div>
           </div>
         </section>

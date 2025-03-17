@@ -41,9 +41,9 @@ const jsonLd = {
   "description": "Spezialisierte Webentwicklung mit Next.js, React und TypeScript. Performance-optimierte Webanwendungen und SEO-fokussierte Entwicklung.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Adolf-Kaschny-Straße 19",
-    "addressLocality": "Leverkusen",
-    "postalCode": "51373",
+    "streetAddress": "Beispielstraße 123",
+    "addressLocality": "Berlin",
+    "postalCode": "10115",
     "addressCountry": "DE"
   },
   "contactPoint": {
@@ -53,7 +53,7 @@ const jsonLd = {
   },
   "founder": {
     "@type": "Person",
-    "name": "Max Andronytschew"
+    "name": "[Name des Geschäftsführers]"
   }
 }
 

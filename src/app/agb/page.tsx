@@ -17,7 +17,7 @@ export default function AGBPage() {
           <div className="space-y-4">
             <p>
               Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Yanchew, 
-              Adolf-Kaschny-Straße 19, 51373 Leverkusen (nachfolgend "Auftragnehmer") und dem jeweiligen 
+              Beispielstraße 123, 10115 Berlin (nachfolgend "Auftragnehmer") und dem jeweiligen 
               Vertragspartner (nachfolgend "Auftraggeber") über Webentwicklungsdienstleistungen.
             </p>
             <p>
